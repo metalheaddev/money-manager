@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Welcome to Money Manager!</h1>
+<br>
+<p>Click <a href="/logout">here</a> to logout.</p>
+<br><br>
+<h3>Expenses:</h3>
+{% for expense in expenses %}
+  <strong>Date:</strong> {{ expense.date }} |
+  <strong>Amount:</strong> {{ expense.amount }} |
+  <strong>Description:</strong> {{ expense.description }} |
+  <strong>Category:</strong> {{ expense.category }} |
+<br>
+{% endfor %}
+
+{% endblock %}
